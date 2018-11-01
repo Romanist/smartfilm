@@ -1,0 +1,177 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    font: 14px Arial, sans-serif !important;
+    color: #ffffff;
+    width: 100%;
+    height: 100%;
+    counter-reset: heading;
+    background: url("../img/bg.jpg") no-repeat 0 0 transparent;
+    background-size: cover;
+}
+
+a {
+    text-decoration: underline;
+    outline: none !important;
+    color: #000000;
+}
+
+a:hover {
+    color: #000000;
+    text-decoration: none;
+    border-bottom-color: transparent;
+}
+
+a:focus {
+    outline: none !important;
+    text-decoration: none;
+    color: #000000;
+}
+
+p {
+    margin: 0 !important;
+    padding-bottom: 15px;
+}
+
+img {
+    border: none;
+    max-width: 100%;
+}
+
+input {
+    vertical-align: middle;
+}
+
+input, textarea {
+    outline: none;
+}
+
+input:active, textarea:active {
+    outline: none;
+}
+
+:focus {
+    outline: none;
+}
+
+#wrapper {
+    margin: 0 auto;
+    width: 100%;
+    height: 100%;
+}
+
+h1, .h1 {
+    font-size: 38px;
+    text-transform: uppercase;
+    color: #000;
+    font-weight: bold;
+    margin: 0 0 25px;
+}
+
+.h2 {
+    font-size: 30px;
+    font-weight: bold;
+    padding: 0;
+    margin: 0 0 25px;
+    text-transform: uppercase;
+    display: block;
+}
+
+ul, ol {
+    margin: 0;
+}
+
+
+/*-----------------
+index ------------------------------*/
+
+#header {
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    height: auto;
+    margin: 0;
+}
+
+.logo {
+    position: absolute;
+    top: 0;
+    left: 15px;
+}
+
+.text_wrapper {
+    position: absolute;
+    top:50%;
+    font-size: 44px;
+    font-weight: bold;
+    margin: 0 auto;
+    left: 50%;
+}
+
+.title {
+    font-size: 124px;
+    text-transform: uppercase;
+}
+
+.date {
+    color: #fff301;
+    font-size: 43px;
+}
+
+.social {
+    list-style: none;
+    font-size: 18px;
+    color: #fff301;
+    margin-top: 35px;
+    text-transform: uppercase;
+}
+
+.social li {
+    display: inline-block;
+    line-height: 40px;
+    vertical-align: middle;
+    margin-left: 10px;
+}
+
+.social li a {
+    -webkit-transition: all .15s;
+    -moz-transition: all .15s;
+    -ms-transition: all .15s;
+    -o-transition: all .15s;
+    transition: all .15s;
+    width: 40px;
+    height: 40px;
+    display: block;
+}
+
+.social li a:hover {
+    background-position: 0 -40px;
+}
+
+.vk {
+    background: url("../img/vk.png") no-repeat 0 0 transparent;
+}
+
+.fb {
+    background: url("../img/f.png") no-repeat 0 0 transparent;
+}
+
+.inst {
+    background: url("../img/inst.png") no-repeat 0 0 transparent;
+}
+
+.tw {
+    background: url("../img/tw.png") no-repeat 0 0 transparent;
+}
+
+.social li.social_title {
+    width: auto;
+}
