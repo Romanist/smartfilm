@@ -9,7 +9,7 @@ html {
 }
 
 body {
-    font: 14px Arial, sans-serif !important;
+    font: 14px Arial, sans-serif ;
     color: #ffffff;
     width: 100%;
     height: 100%;
@@ -21,7 +21,7 @@ body {
 
 a {
     text-decoration: underline;
-    outline: none !important;
+    outline: none ;
     color: #000000;
 }
 
@@ -32,14 +32,14 @@ a:hover {
 }
 
 a:focus {
-    outline: none !important;
+    outline: none ;
     text-decoration: none;
     color: #000000;
 }
 
 p {
-    margin: 0 !important;
-    padding-bottom: 15px;
+    margin: 0 ;
+    /*padding-bottom: 15px;*/
 }
 
 img {
@@ -112,11 +112,15 @@ index ------------------------------*/
 
 .text_wrapper {
     position: absolute;
-    top:51%;
     font-size: 35px;
     margin: 0 auto;
-    left: 49%;
+    left: 50%;
+    top: 50%;
     text-transform: uppercase;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
 }
 
 .title {
@@ -183,12 +187,9 @@ index ------------------------------*/
     height: 27px;
 }
 
-
-
 .vk, .fb, .inst {
     overflow: hidden;
 }
-
 
 .first-icon {
     display: flex;
@@ -205,7 +206,6 @@ index ------------------------------*/
     background-color: #fcf539;
 }
 
-
 .social li.social_title {
     width: auto;
 }
@@ -214,6 +214,7 @@ index ------------------------------*/
 .text_wrapper__txt {
     padding-bottom: 12px;
 }
+
 .phone-title {
     position: absolute;
     bottom: 30px;
@@ -274,10 +275,24 @@ index ------------------------------*/
 }
 html, body {
     min-height: 650px;
-    /*min-height: 480px;*/
 }
+
 #header {
     position: absolute;
+}
+@keyframes fadeIn {
+  0%,50% {opacity: 0;}
+  100% {opacity: 1;}
+} 
+.date {
+    opacity: 0;
+    animation: fadeIn .6s ease both;
+}
+
+@media screen and (max-width: 1024px) and (orientation: landscape) {
+    .text_wrapper{
+        padding-top: 50px;
+    }
 }
 
 @media screen and (max-width: 768px) {
@@ -300,10 +315,11 @@ html, body {
     }
     
     .social{
-        margin-top: 22px !important;
+        margin-top: 22px;
         padding-right: 15px;
         text-align: right;
     }
+
     .social li.social_title{
         font-size: 31px;
         padding-bottom: 9px;
@@ -313,99 +329,80 @@ html, body {
         margin-left: 14px;
     }
     .text_wrapper{
-        font-size: 22px !important;
-        top: 45%;
+        font-size: 21px ;
+        /*top: 45%;*/
     }
     .counter {
         font-size: 36px;
     }
     .date{
-        /* font-size: 22px !important; */
+        font-size: 21px ;
     }
 
     .text_wrapper__txt {
         padding-bottom: 3px;
     }
-}
-
-@media (max-width: 768px) {
     .navbar .social li a {
         width: 40px;
         height: 40px;
     }
-
     .roll {
         height: 78px;
     }
-
     .vk:hover > .roll, .fb:hover > .roll, .inst:hover > .roll{
         transform: translateY(-38px);
     }
-
     .vk svg {
        width: 29px;
        height: 17px;
     }
-
     .fb svg {
         height: 26px;
         width: 14px;
     }
-
     .inst svg {
         width: 25px;
         height: 25px;
     }
-
-    #wrapper .text_wrapper {
-        font-size: 21px;
-    }
-
-    #wrapper .date, #wrapper .date span {
-        /* font-size: 21px; */ /* new */
-    }
-
     #wrapper span.counter {
         padding-right: 7px;
     }
-
-    #header .social li {
-      margin-left: 20px !important;
+    .social li {
+      margin-left: 20px;
     }
     #header .social {
         font-size: 31px;
         display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-end;
+        flex-wrap: wrap;
+        justify-content: flex-end;
     }
-
     #header .social .social_title {
         width: 100%;
         text-align: right;
     }
-
-    
     .phone-title{
         left: 25px;
     }
-}
-@media only screen and (orientation:landscape) and (max-width:768px) {
-    .text_wrapper {
-        margin-top: -15px!important;
-    }
-
     #header {
         position: absolute;
     }
-
-    html, body {
-        min-height: 750px;
-    }
-
     .phone-title {
         position: absolute;
     }
 }
+
+@media screen and (max-width: 768px) and (orientation: landscape) {
+    html, body {
+        min-height: 600px;
+    }    
+    .phone-title{
+        bottom: 10px;
+    }
+    .text_wrapper{
+        padding-top: 40px;
+    }
+}
+
 @media (max-width: 520px) {
     .navbar .logo {
         width: 120px;
@@ -423,28 +420,20 @@ html, body {
 
     #header .social {
         font-size: 21px;
-        margin-top: 0 !important;
+        margin-top: 0 ;
     }
-
     .container-fluid {
         margin-top: 0;
     }
-
-    #wrapper .text_wrapper {
-        margin-left: 0 !important;
-        left: 0;
-        padding-left: 15px;
-        top: 50%;
-    }
     #wrapper .text_wrapper, 
     #wrapper .text_wrapper .date {
-        font-size: 14px !important;      
+        font-size: 14px ;      
     }
     .social li.social_title{
         font-size: 18px;
     }
     #header .social li{
-        margin-left: 8px !important;
+        margin-left: 8px ;
     }
     .navbar .logo{
         left: 15px;
@@ -462,19 +451,7 @@ html, body {
 
 @media (max-width: 375px) {
     #wrapper .title{
-        font-size: 50px;
-    }
-}
-
-@media (max-width: 340px) {
-    .text_wrapper
-    /* , #wrapper .date */ /* new */
-    /* , #wrapper .date span */ /* new */
-    {
-        /* font-size: 14px !important; */ /* new */
-    }
-    #wrapper .title{
-        font-size: 45px;
+        font-size: 48px;
     }
     html,body{
         min-width: 320px;
